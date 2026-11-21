@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "type": "sprite-atlas",
+  "asset": "person-look-atlas.webp",
+  "frameCount": 5,
+  "columns": 3,
+  "rows": 2,
+  "cellWidth": 512,
+  "cellHeight": 768,
+  "atlasWidth": 1536,
+  "atlasHeight": 1536,
+  "quality": 88,
+  "lossless": false,
+  "files": [
+    "frame-000-far-left.png",
+    "frame-001-slight-left.png",
+    "frame-002-center.png",
+    "frame-003-slight-right.png",
+    "frame-004-far-right.png"
+  ]
+}
