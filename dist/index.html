@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="冉书寒的交互式个人作品与经历展示。"
+    />
+    <title>冉书寒</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" aria-label="页面顶部">
+      <a class="wordmark" href="#main" aria-label="返回首页">
+        <span class="wordmark-dot" aria-hidden="true"></span>
+        <span>RAN SHUHAN</span>
+      </a>
+      <p class="header-note">DATA · BUSINESS · AI</p>
+      <button class="motion-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">◌</span>
+        <span class="motion-label">减弱动效</span>
+      </button>
+    </header>
+
+    <main id="main" class="hero" tabindex="-1">
+      <section class="hero-stage" aria-labelledby="hero-title">
+        <div class="spring-garden" aria-hidden="true"></div>
+        <canvas class="splash-cursor-layer" aria-hidden="true"></canvas>
+        <div class="lollipop-cursor" aria-hidden="true">
+          <span class="lollipop-candy"></span>
+          <span class="lollipop-stick"></span>
+          <span class="lollipop-bow"></span>
+        </div>
+        <div class="stage-halo" aria-hidden="true"></div>
+
+        <div class="intro-copy">
+          <p class="eyebrow">HELLO, I AM</p>
+          <h1 id="hero-title">冉书寒</h1>
+          <p>用数据理解真实世界，也把复杂问题讲得清楚。</p>
+        </div>
+
+        <div class="portrait-wrap" aria-label="个人基本信息">
+          <img
+            class="portrait-art"
+            src="./assets/ip-crayon-laptop-v1.png"
+            alt="抱着笔记本电脑的粉色裙装蜡笔人物 IP"
+            width="1536"
+            height="1536"
+          />
+          <div class="identity-card">
+            <p class="identity-role">数据分析 · 商业洞察 · AI 应用</p>
+            <p>靠近不同入口，我会切换对应的探索状态</p>
+          </div>
+        </div>
+
+        <nav class="sketch-nav" aria-label="个人简历四个板块">
+          <button class="sketch-node node-resume" type="button" data-panel="resume" data-pose="ip-crayon-book-v1.png">
+            <img class="node-icon" src="./assets/nav-resume-3d-v1.png" alt="" aria-hidden="true" />
+            <span class="node-en">RESUME</span>
+            <strong>简历与教育</strong>
+          </button>
+          <button class="sketch-node node-skills" type="button" data-panel="skills" data-pose="ip-crayon-laptop-v1.png">
+            <img class="node-icon" src="./assets/nav-skill-3d-v1.png" alt="" aria-hidden="true" />
+            <span class="node-en">SKILL</span>
+            <strong>技能坐标</strong>
+          </button>
+          <button class="sketch-node node-experience" type="button" data-panel="internships" data-pose="ip-crayon-wave-v1.png">
+            <img class="node-icon" src="./assets/nav-experience-3d-v1.png" alt="" aria-hidden="true" />
+            <span class="node-en">EXPERIENCE</span>
+            <strong>实习轨迹</strong>
+          </button>
+          <button class="sketch-node node-projects" type="button" data-panel="projects" data-pose="ip-crayon-cake-v1.png">
+            <img class="node-icon" src="./assets/nav-project-3d-v1.png" alt="" aria-hidden="true" />
+            <span class="node-en">PROJECT</span>
+            <strong>项目与作品</strong>
+          </button>
+        </nav>
+
+        <p class="interaction-hint">
+          <span aria-hidden="true"></span>
+          移动棒棒糖唤醒花草涟漪 · 靠近入口切换人物状态
+        </p>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>INTERACTIVE RESUME · 2026</span>
+    </footer>
+
+    <div class="panel-backdrop" data-close-panel hidden></div>
+    <aside
+      id="content-panel"
+      class="content-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="panel-title"
+      hidden
+    >
+      <div class="panel-paper" aria-hidden="true"></div>
+      <header class="panel-header">
+        <div>
+          <p id="panel-kicker" class="panel-kicker"></p>
+          <h2 id="panel-title"></h2>
+        </div>
+        <button class="panel-close" type="button" data-close-panel aria-label="关闭内容面板">×</button>
+      </header>
+      <div id="panel-content" class="panel-content"></div>
+    </aside>
+
+    <dialog id="image-dialog" class="image-dialog">
+      <button class="image-close" type="button" aria-label="关闭图片预览">×</button>
+      <img src="" alt="" />
+      <p></p>
+    </dialog>
+
+    <template id="template-resume">
+      <div class="section-lead">
+        <p>从大数据管理与应用走向信息管理与商业分析，关注数据如何进入真实业务决策。</p>
+        <span>PROFILE</span>
+      </div>
+      <div class="resume-overview">
+        <article class="education-card">
+          <div class="education-heading">
+            <div>
+              <time>2026.09 — 2028.11</time>
+              <h3>香港中文大学（深圳）</h3>
+            </div>
+            <span>硕士 · 全日制</span>
+          </div>
+          <p class="education-program">信息管理与商业分析</p>
+          <div class="education-detail">
+            <h4>主修课程</h4>
+            <ul class="course-list">
+              <li>商业机器学习</li>
+              <li>编程与数据挖掘</li>
+              <li>生成式人工智能商业应用</li>
+              <li>电子商务创新与数据智能</li>
+            </ul>
+          </div>
+        </article>
+        <article class="education-card">
+          <div class="education-heading">
+            <div>
+              <time>2022.09 — 2026.07</time>
+              <h3>中国传媒大学</h3>
+            </div>
+            <span>本科 · 全日制</span>
+          </div>
+          <p class="education-program">大数据管理与应用 <b>GPA 3.70 / 4.00</b></p>
+          <div class="education-detail">
+            <h4>主修课程</h4>
+            <ul class="course-list">
+              <li>深度学习</li>
+              <li>大数据分析</li>
+              <li>社会网络分析</li>
+              <li>数据结构与算法</li>
+              <li>数据库技术</li>
+              <li>数据可视化</li>
+            </ul>
+          </div>
+          <div class="education-detail">
+            <h4>校级荣誉</h4>
+            <ul class="award-list">
+              <li>校级三好学生</li>
+              <li>校级三等奖学金</li>
+              <li>校级社会实践单项奖学金</li>
+              <li>优秀团员</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <section class="resume-original" aria-labelledby="resume-original-title">
+        <div class="resume-original-heading">
+          <div>
+            <p class="item-meta">ORIGINAL RESUME</p>
+            <h3 id="resume-original-title">简历原件</h3>
+          </div>
+          <a class="resume-download" href="./assets/resume.pdf" download>下载原始简历 PDF</a>
+        </div>
+        <img class="resume-preview" src="./assets/resume-page-1.png" alt="一页中文简历原件预览" loading="eager" />
+        <p class="resume-privacy-note">简历原件包含个人联系方式，请仅在确有需要时下载查看。</p>
+      </section>
+    </template>
+
+    <template id="template-internships">
+      <div class="section-lead">
+        <p>围绕用户运营、市场研究与数据协同，从业务问题出发搭建分析路径。</p>
+        <span>3 段经历</span>
+      </div>
+      <figure class="story-scroll-figure">
+        <button class="story-image-button" type="button" data-image="./assets/internship-xiaohei-long-scroll.png" data-title="实习经历长卷">
+          <img src="./assets/internship-xiaohei-long-scroll.png" alt="小黑沿曲线路径展示三段实习的六个工作节点" loading="eager" />
+        </button>
+        <figcaption>完整路径一屏显示；点击可查看大图。</figcaption>
+      </figure>
+      <ol class="timeline">
+        <li>
+          <time>2025.09 — 2026.01</time>
+          <div>
+            <p class="item-meta">市场运营部 · 用户运营实习生（数据分析方向）</p>
+            <h3>深圳跃然创新科技有限公司</h3>
+            <p class="data-type">私域用户与产品经营数据</p>
+            <ul class="achievement-list">
+              <li>梳理 1000+ 企业微信用户，迭代标签与分层策略，支持 5000 人社群运营。</li>
+              <li>连续 12 周跟踪销售 GMV、去退 GMV、环比增速与退款率。</li>
+              <li>核对入库、库存与订单数据，输出退款原因分析。</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <time>2025.03 — 2025.06</time>
+          <div>
+            <p class="item-meta">校园业务部 · 市场调研实习生</p>
+            <h3>北京网聘信息技术有限公司（智联招聘）</h3>
+            <p class="data-type">海外招聘市场与行业情报数据</p>
+            <ul class="achievement-list">
+              <li>按周汇总海外 B 端招聘市场信息，累计输出 8 份标准化周报。</li>
+              <li>分类整理 800+ 条行业情报，完善资源 Mapping 数据库。</li>
+              <li>监测竞品动态与赛道机会，支持业务判断。</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <time>2024.03 — 2024.06</time>
+          <div>
+            <p class="item-meta">平台运营部·数据中心组 · 数据分析实习生</p>
+            <h3>中国信息经济社会有限公司</h3>
+            <p class="data-type">政务数据</p>
+            <ul class="achievement-list">
+              <li>汇总全国 32 个地区的政务数据共享与系统对接需求，整理近百条需求。</li>
+              <li>梳理数据共享枢纽与业务对接逻辑，参与官网初版方案协作。</li>
+              <li>围绕业务交接与数据采集提出 2 项建议。</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </template>
+
+    <template id="template-projects">
+      <div class="section-lead">
+        <p>从推荐系统、服务设计到预测建模，关注“分析结果如何真正进入决策”。</p>
+        <span>精选项目</span>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-lilac">
+          <p class="item-meta">智能推荐 · Workflow · RAG</p>
+          <h3>GiftRight 智能送礼推荐平台</h3>
+          <p>围绕关系、场合、预算与偏好建立知识结构，完成可演示的送礼推荐流程原型。</p>
+          <div class="tag-row"><span>Dify</span><span>RAG</span><span>知识库</span></div>
+        </article>
+        <article class="feature-card feature-sage">
+          <p class="item-meta">用户研究 · 服务设计</p>
+          <h3>顺丰国际“生日寄”服务创新</h3>
+          <p>分析跨境寄递场景，构建用户画像、需求分层和核心痛点优先级，输出服务蓝图与交互原型。</p>
+          <div class="tag-row"><span>用户旅程</span><span>服务蓝图</span><span>A/B 测试</span></div>
+        </article>
+        <article class="feature-card feature-blue">
+          <p class="item-meta">预测建模 · 营销优化</p>
+          <h3>电商复购预测与投放策略</h3>
+          <p>基于 10 万条用户行为数据完成清洗、分群、标签与特征分析，构建复购预测模型。</p>
+          <div class="metric-row"><span><strong>0.723</strong> ROC-AUC</span><span><strong>3.01×</strong> Top 10% Lift</span></div>
+        </article>
+        <article class="feature-card feature-coral">
+          <p class="item-meta">模型评估 · 偏好分析</p>
+          <h3>大语言模型人类偏好分析</h3>
+          <p>分析多场景投票数据，以 Bradley–Terry 模型、逻辑回归与 Bootstrap 建立候选模型筛选框架。</p>
+          <div class="tag-row"><span>135,634 条投票</span><span>53 个模型</span><span>126 种场景</span></div>
+        </article>
+      </div>
+    </template>
+
+    <template id="template-skills">
+      <div class="section-lead">
+        <p>技能不是孤立的软件清单，而是一套从数据到判断、再到表达的工作链路。</p>
+        <span>持续更新</span>
+      </div>
+      <div class="skill-map">
+        <section>
+          <p class="skill-number">01</p>
+          <h3>数据分析与编程</h3>
+          <div class="skill-cloud"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>SQL</span><span>R</span><span>Stata</span><span>SPSS</span></div>
+        </section>
+        <section>
+          <p class="skill-number">02</p>
+          <h3>可视化与商业分析</h3>
+          <div class="skill-cloud"><span>Excel</span><span>Power Query</span><span>Power BI</span><span>Tableau</span><span>FineBI</span><span>Gephi</span></div>
+        </section>
+        <section>
+          <p class="skill-number">03</p>
+          <h3>AI 应用与工作流</h3>
+          <div class="skill-cloud"><span>Dify</span><span>RAG</span><span>LLM 应用搭建</span><span>Prompt Engineering</span><span>Workflow</span></div>
+        </section>
+        <section>
+          <p class="skill-number">04</p>
+          <h3>语言与协作</h3>
+          <div class="language-bars">
+            <div><span>中文</span><i style="--level: 100%"></i><b>母语</b></div>
+            <div><span>英语</span><i style="--level: 78%"></i><b>CET-6 · IELTS 6.5</b></div>
+          </div>
+        </section>
+      </div>
+    </template>
+
+    <template id="template-portfolio">
+      <div class="section-lead">
+        <p>本科阶段的 12 个项目图集。点击任意封面可查看研究结果图。</p>
+        <span>12 个项目</span>
+      </div>
+      <div class="portfolio-grid">
+        <button class="work-card" type="button" data-image="./assets/projects/01.png" data-title="AI 智能导购与购买意愿"><img src="./assets/projects/01.png" alt="AI 智能导购与购买意愿研究结果缩略图" loading="lazy"><span><b>AI 智能导购与购买意愿</b><small>用户研究 · AI 应用</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/02.png" data-title="RTCNT 股票时间序列预测"><img src="./assets/projects/02.png" alt="RTCNT 股票时间序列预测研究结果缩略图" loading="lazy"><span><b>RTCNT 股票时间序列预测</b><small>时间序列 · 预测建模</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/03.png" data-title="学生生活方式、压力与 GPA"><img src="./assets/projects/03.png" alt="学生生活方式、压力与 GPA 研究结果缩略图" loading="lazy"><span><b>学生生活方式、压力与 GPA</b><small>统计分析 · 校园研究</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/04.png" data-title="睡眠质量与生活方式"><img src="./assets/projects/04.png" alt="睡眠质量与生活方式研究结果缩略图" loading="lazy"><span><b>睡眠质量与生活方式</b><small>健康数据 · 相关分析</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/05.png" data-title="北京大学生乡村 Walk 调研"><img src="./assets/projects/05.png" alt="北京大学生乡村 Walk 调研研究结果缩略图" loading="lazy"><span><b>北京大学生乡村 Walk 调研</b><small>市场调研 · 用户洞察</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/06.png" data-title="《黑神话·悟空》玩家评论分析"><img src="./assets/projects/06.png" alt="黑神话悟空玩家评论分析研究结果缩略图" loading="lazy"><span><b>《黑神话·悟空》玩家评论分析</b><small>NLP · 文本分析</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/07.png" data-title="好好吃饭"><img src="./assets/projects/07.png" alt="好好吃饭研究结果缩略图" loading="lazy"><span><b>好好吃饭</b><small>行为洞察 · 可视化</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/08.png" data-title="Momo 聊天数据可视化"><img src="./assets/projects/08.png" alt="Momo 聊天数据可视化研究结果缩略图" loading="lazy"><span><b>Momo 聊天数据可视化</b><small>社交数据 · 可视化</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/09.png" data-title="狗牙儿品牌认知与消费偏好"><img src="./assets/projects/09.png" alt="狗牙儿品牌认知与消费偏好研究结果缩略图" loading="lazy"><span><b>狗牙儿品牌认知与消费偏好</b><small>品牌研究 · 消费者洞察</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/10.png" data-title="电商商品智能推荐"><img src="./assets/projects/10.png" alt="电商商品智能推荐研究结果缩略图" loading="lazy"><span><b>电商商品智能推荐</b><small>推荐系统 · 机器学习</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/11.png" data-title="微博歌手关注网络"><img src="./assets/projects/11.png" alt="微博歌手关注网络研究结果缩略图" loading="lazy"><span><b>微博歌手关注网络</b><small>社会网络 · Gephi</small></span></button>
+        <button class="work-card" type="button" data-image="./assets/projects/12.png" data-title="社交媒体多模态广告识别"><img src="./assets/projects/12.png" alt="社交媒体多模态广告识别研究结果缩略图" loading="lazy"><span><b>社交媒体多模态广告识别</b><small>多模态 · 分类模型</small></span></button>
+      </div>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
