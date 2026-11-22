@@ -127,8 +127,9 @@
     const nodes = [...document.querySelectorAll(".sketch-node[data-pose]")];
     if (!portrait || !navigation || !nodes.length) return;
 
-    const defaultPose = "ip-crayon-laptop-v1.png";
+    const defaultPose = "ip-crayon-default-v1.png";
     const poseLabels = {
+      "ip-crayon-default-v1.png": "站立微笑的粉色裙装蜡笔人物 IP",
       "ip-crayon-laptop-v1.png": "使用笔记本电脑的粉色裙装蜡笔人物 IP",
       "ip-crayon-book-v1.png": "阅读书本的粉色裙装蜡笔人物 IP",
       "ip-crayon-wave-v1.png": "挥手介绍经历的粉色裙装蜡笔人物 IP",
